@@ -8,6 +8,12 @@ basket?.reduce((amount, item)=> item.price + amount, 0);
 const reducer = (state, action) => {
     console.log(action);
     switch (action.type) {
+      case "SET USER":
+        return {
+          ...state,
+          user: action.user
+        }
+
         case 'ADD_TO_BASKET':
             //logic to add items to basket ]
           return {
